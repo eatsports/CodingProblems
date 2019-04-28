@@ -43,18 +43,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="BinaryTreeSerialization\Node.cs" />
-        <Compile Include="BinaryTreeSerialization\BinaryTreeSerializer.cs" />
-        <Compile Include="ElementProductArray.cs" />
-        <Compile Include="LowestMissingPositive.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="SumOfAnyTwo.cs" />
+        <Compile Include="Tests\BinaryTreeSerialization\BinaryTreeSerializer.cs" />
+        <Compile Include="Tests\BinaryTreeSerialization\Node.cs" />
+        <Compile Include="Tests\ElementProductArray.cs" />
+        <Compile Include="Tests\LowestMissingPositive.cs" />
+        <Compile Include="Tests\SumOfAnyTwo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="FirstAndLastOfPair.py" />
+      <Content Include="Tests\FirstAndLastOfPair.py" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
