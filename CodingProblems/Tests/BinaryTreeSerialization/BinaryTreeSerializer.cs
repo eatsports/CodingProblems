@@ -2,7 +2,7 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace CodingProblems.BinaryTreeSerialization
+namespace CodingProblems.Tests.BinaryTreeSerialization
 {
     /// <summary>
     ///Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.

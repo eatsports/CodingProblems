@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.BinaryTreeSerialization
+﻿namespace CodingProblems.Tests.BinaryTreeSerialization
 {
     internal class Node
     {
