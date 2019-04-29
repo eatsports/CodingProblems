@@ -25,19 +25,19 @@ namespace CodingProblems.Tests.BinaryTreeSerialization
         public void Test()
         {
             var node = new Node("root", new Node("left", new Node("left.left")), new Node("right"));
-            Assert.AreEqual("left.left", Deserialize(Serialize(node)).Left.Left.Val);
-            Assert.AreEqual("right", Deserialize(Serialize(node)).Right.Val);
+            Assert.AreEqual("left.left", Deserialize(SerializeRecursive(node)).Left.Left.Val);
+            Assert.AreEqual("right", Deserialize(SerializeRecursive(node)).Right.Val);
         }
 
         private Node Deserialize(string stringNode)
         {
             var nodes = stringNode.Split('-').ToList();
             var queue = new Queue<string>(nodes);
-            var outputNode = NodeBuilder(queue);
+            var outputNode = NodeBuilderRecursive(queue);
             return outputNode;
         }
 
-        private Node NodeBuilder(Queue<string> nodes)
+        private Node NodeBuilderRecursive(Queue<string> nodes)
         {
             if (nodes.Peek() != null)
             {
@@ -47,7 +47,7 @@ namespace CodingProblems.Tests.BinaryTreeSerialization
                     return null;
                 }
 
-                var node = new Node(currentNode, NodeBuilder(nodes), NodeBuilder(nodes));
+                var node = new Node(currentNode, NodeBuilderRecursive(nodes), NodeBuilderRecursive(nodes));
 
                 return node;
             }
@@ -55,16 +55,16 @@ namespace CodingProblems.Tests.BinaryTreeSerialization
             return null;
         }
 
-        private string Serialize(Node root)
+        private string SerializeRecursive(Node root)
         {
             var result = "";
             if (root == null)
             {
-                return result + EmptyNodeSymbol + '-';
+                return $"{result}{EmptyNodeSymbol}-";
             }
 
-            result += root.Val + '-';
-            result += Serialize(root.Left) + Serialize(root.Right);
+            result += $"{root.Val}-";
+            result += $"{SerializeRecursive(root.Left)}{SerializeRecursive(root.Right)}";
 
             return result;
         }

@@ -18,6 +18,7 @@ namespace CodingProblems.Tests
         {
             Assert.AreEqual(2, GetMinMissingPositiveInt(new[] {3, 4, -1, 1}));
             Assert.AreEqual(3, GetMinMissingPositiveInt(new[] {1, 2, 0}));
+            Assert.AreEqual(5, GetMinMissingPositiveInt(new[] {3, 7, 6,-1,1,0,4,2}));
         }
 
         private int GetMinMissingPositiveInt(int[] arr)

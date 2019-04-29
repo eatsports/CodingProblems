@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace CodingProblems.Tests
 {
@@ -22,41 +21,44 @@ namespace CodingProblems.Tests
 
         private int[] GetProductArray(int[] arr) // O(2n)
         {
-            var tmpArray = new int[arr.Length];
-            Array.Copy(arr, tmpArray, arr.Length);
+            var arrayLength = arr.Length;
+
+            var result = new int[arrayLength];
+
             var product = 1;
-            for (var i = 0; i < tmpArray.Length; i++)
+            for (var i = 0; i < arrayLength; i++)
             {
-                product *= tmpArray[i];
+                product *= arr[i];
             }
 
-            for (var i = 0; i < tmpArray.Length; i++)
+            for (var i = 0; i < arrayLength; i++)
             {
-                tmpArray[i] = product / tmpArray[i];
+                result[i] = product / arr[i];
             }
 
-            return tmpArray;
+            return result;
         }
 
         // Follow-up: what if you can't use division?
         private int[] GetProductArrayNoDivision(int[] arr) // O(2n)
         {
-            var product = new int[arr.Length];
+            var arrayLength = arr.Length;
+            var result = new int[arrayLength];
             var tmpNum = 1;
-            for (var i = 0; i < product.Length; i++)
+            for (var i = 0; i < arrayLength; i++)
             {
-                product[i] = tmpNum;
+                result[i] = tmpNum;
                 tmpNum *= arr[i];
             }
 
             tmpNum = 1;
-            for (var i = product.Length - 1; i >= 0; i--)
+            for (var i = arrayLength - 1; i >= 0; i--)
             {
-                product[i] *= tmpNum;
+                result[i] *= tmpNum;
                 tmpNum *= arr[i];
             }
 
-            return product;
+            return result;
         }
     }
 }
