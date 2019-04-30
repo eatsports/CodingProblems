@@ -49,6 +49,7 @@
         <Compile Include="Tests\CountPairsInArray.cs" />
         <Compile Include="Tests\ElementProductArray.cs" />
         <Compile Include="Tests\LowestMissingPositive.cs" />
+        <Compile Include="Tests\MessageDecodeWays.cs" />
         <Compile Include="Tests\SumOfAnyTwo.cs" />
     </ItemGroup>
     <ItemGroup>
