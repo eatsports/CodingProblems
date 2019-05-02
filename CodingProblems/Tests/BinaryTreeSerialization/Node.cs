@@ -1,6 +1,6 @@
 ﻿namespace CodingProblems.Tests.BinaryTreeSerialization
 {
-    internal class Node
+    public class Node
     {
         public string Val { get; }
         public Node Left { get; }
