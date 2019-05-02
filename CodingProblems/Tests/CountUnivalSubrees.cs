@@ -30,16 +30,16 @@ namespace CodingProblems.Tests
                         new Node("1"), 
                         new Node("1")), 
                     new Node("0")));
-            Assert.AreEqual(5, CountSubreesRecursive(node));
+            Assert.AreEqual(5, CountSubtreesRecursive(node));
             
             node = new Node("0");
-            Assert.AreEqual(1, CountSubreesRecursive(node));
+            Assert.AreEqual(1, CountSubtreesRecursive(node));
             
             node = new Node("0", new Node("1"), new Node("1"));
-            Assert.AreEqual(3, CountSubreesRecursive(node));
+            Assert.AreEqual(3, CountSubtreesRecursive(node));
         }
 
-        public int CountSubreesRecursive(Node node)
+        public int CountSubtreesRecursive(Node node)
         {
             
             var count = 0;
@@ -56,7 +56,7 @@ namespace CodingProblems.Tests
                 count++;
             }
 
-            return count + CountSubreesRecursive(node.Left) + CountSubreesRecursive(node.Right);
+            return count + CountSubtreesRecursive(node.Left) + CountSubtreesRecursive(node.Right);
         }
         
     }
