@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics;
 using CodingProblems.Tests.BinaryTreeSerialization;
 using NUnit.Framework;
 
@@ -18,30 +16,29 @@ namespace CodingProblems.Tests
     /// 1   1
     /// </summary>
     [TestFixture]
-    public class CountUnivalSubrees
+    public class CountUnivalSubtrees
     {
         [Test]
         public void Test()
         {
             var node = new Node("0",
-                new Node("1"), 
-                new Node("0", 
-                    new Node("1", 
-                        new Node("1"), 
-                        new Node("1")), 
+                new Node("1"),
+                new Node("0",
+                    new Node("1",
+                        new Node("1"),
+                        new Node("1")),
                     new Node("0")));
             Assert.AreEqual(5, CountSubtreesRecursive(node));
-            
+
             node = new Node("0");
             Assert.AreEqual(1, CountSubtreesRecursive(node));
-            
+
             node = new Node("0", new Node("1"), new Node("1"));
             Assert.AreEqual(3, CountSubtreesRecursive(node));
         }
 
         public int CountSubtreesRecursive(Node node)
         {
-            
             var count = 0;
             if (node == null)
             {
@@ -58,6 +55,5 @@ namespace CodingProblems.Tests
 
             return count + CountSubtreesRecursive(node.Left) + CountSubtreesRecursive(node.Right);
         }
-        
     }
 }

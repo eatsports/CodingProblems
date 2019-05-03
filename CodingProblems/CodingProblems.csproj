@@ -44,10 +44,11 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Tests\BiggestNonAdjacentSum.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\BinaryTreeSerializer.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\Node.cs" />
         <Compile Include="Tests\CountPairsInArray.cs" />
-        <Compile Include="Tests\CountUnivalSubrees.cs" />
+        <Compile Include="Tests\CountUnivalSubtrees.cs" />
         <Compile Include="Tests\ElementProductArray.cs" />
         <Compile Include="Tests\LowestMissingPositive.cs" />
         <Compile Include="Tests\MessageDecodeWays.cs" />
@@ -58,6 +59,7 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Tests\FirstAndLastOfPair.py" />
+      <Content Include="Tests\jobScheduler.py" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
