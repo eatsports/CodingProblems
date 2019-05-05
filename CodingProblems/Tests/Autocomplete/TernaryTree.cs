@@ -55,14 +55,17 @@ namespace CodingProblems.Tests.Autocomplete
 
         private void AddWordsToList(string startString, List<string> wordList, Node node)
         {
-            if (node == null) return;
-            var word = new StringBuilder(startString);
-            word.Append(node.Value);
-            if (node.StringEnd) wordList.Add(word.ToString());
-            AddWordsToList(startString, wordList, node.Left);
-            AddWordsToList(startString, wordList, node.Right);
-            node = node.Center;
-            AddWordsToList(word.ToString(), wordList, node);
+            while (true)
+            {
+                if (node == null) return;
+                var word = new StringBuilder(startString);
+                word.Append(node.Value);
+                if (node.StringEnd) wordList.Add(word.ToString());
+                AddWordsToList(startString, wordList, node.Left);
+                AddWordsToList(startString, wordList, node.Right);
+                node = node.Center;
+                startString = word.ToString();
+            }
         }
 
         private Node GetStartingNode(string str)
