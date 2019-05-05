@@ -62,7 +62,7 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Tests\FirstAndLastOfPair.py" />
-      <Content Include="Tests\jobScheduler.py" />
+      <Content Include="Tests\JobScheduler.py" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

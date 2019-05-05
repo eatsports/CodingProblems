@@ -28,6 +28,9 @@ namespace CodingProblems.Tests.Autocomplete
             result = searchTree.GetAutocompleteWords("d");
             Assert.True(result.Count == 3 && result.Contains("dog") && result.Contains("deer") &&
                         result.Contains("deal"));
+            
+            result = searchTree.GetAutocompleteWords("dog");
+            Assert.True(result.Count == 0);
         }
 
         private void AddWords(TernaryTree tree, string[] words)
