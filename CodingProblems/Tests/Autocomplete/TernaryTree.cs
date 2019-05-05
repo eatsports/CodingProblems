@@ -43,32 +43,6 @@ namespace CodingProblems.Tests.Autocomplete
             Add(word, 0, ref _head);
         }
 
-        public bool Contains(string str)
-        {
-            if (string.IsNullOrEmpty(str)) throw new ArgumentException("The string can't be null or an empty string");
-            var index = 0;
-            var node = _head;
-            while (node != null)
-            {
-                var cmp = str[index] - node.Value;
-                if (cmp < 0)
-                {
-                    node = node.Left;
-                }
-                else if (cmp > 0)
-                {
-                    node = node.Right;
-                }
-                else
-                {
-                    if (++index == str.Length) return node.StringEnd;
-                    node = node.Center;
-                }
-            }
-
-            return false;
-        }
-
         public List<string> GetAutocompleteWords(string str)
         {
             if (string.IsNullOrEmpty(str)) throw new ArgumentException("The string can't be null or an empty string");

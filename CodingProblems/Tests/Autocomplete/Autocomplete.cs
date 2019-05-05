@@ -1,4 +1,3 @@
-using System;
 using NUnit.Framework;
 
 namespace CodingProblems.Tests.Autocomplete
@@ -19,13 +18,13 @@ namespace CodingProblems.Tests.Autocomplete
             var words = new[] {"dog", "deer", "deal"};
             var searchTree = new TernaryTree();
             AddWords(searchTree, words);
-            
+
             var result = searchTree.GetAutocompleteWords("de");
             Assert.True(result.Count == 2 && result.Contains("deer") && result.Contains("deal"));
-            
+
             result = searchTree.GetAutocompleteWords("do");
             Assert.True(result.Count == 1 && result.Contains("dog"));
-            
+
             result = searchTree.GetAutocompleteWords("d");
             Assert.True(result.Count == 3 && result.Contains("dog") && result.Contains("deer") &&
                         result.Contains("deal"));
