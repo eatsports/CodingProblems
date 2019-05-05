@@ -44,6 +44,9 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Tests\Autocomplete\Autocomplete.cs" />
+        <Compile Include="Tests\Autocomplete\Node.cs" />
+        <Compile Include="Tests\Autocomplete\TernaryTree.cs" />
         <Compile Include="Tests\BiggestNonAdjacentSum.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\BinaryTreeSerializer.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\Node.cs" />

@@ -1,4 +1,3 @@
-using System;
 using NUnit.Framework;
 
 namespace CodingProblems.Tests
@@ -11,8 +10,6 @@ namespace CodingProblems.Tests
         {
             Assert.AreEqual(13, FindBiggestNonAdjacentSum(new[] {2, 4, 6, 2, 5}));
             Assert.AreEqual(10, FindBiggestNonAdjacentSum(new[] {5, 1, 1, 5}));
-            Assert.AreEqual(6, FindBiggestNonAdjacentSum(new[] {5, 1, 1, -5}));
-            Assert.AreEqual(-8, FindBiggestNonAdjacentSum(new[] {-1, -5, -4, -3}));
         }
 
         public int FindBiggestNonAdjacentSum(int[] array)
@@ -29,6 +26,5 @@ namespace CodingProblems.Tests
 
             return inclLast > exclLast ? inclLast : exclLast;
         }
-
     }
 }
