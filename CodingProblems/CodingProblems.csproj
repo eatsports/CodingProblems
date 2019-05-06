@@ -50,6 +50,7 @@
         <Compile Include="Tests\BiggestNonAdjacentSum.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\BinaryTreeSerializer.cs" />
         <Compile Include="Tests\BinaryTreeSerialization\Node.cs" />
+        <Compile Include="Tests\ClimbingLadders.cs" />
         <Compile Include="Tests\CountPairsInArray.cs" />
         <Compile Include="Tests\CountUnivalSubtrees.cs" />
         <Compile Include="Tests\ElementProductArray.cs" />
